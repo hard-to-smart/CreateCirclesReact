@@ -11,7 +11,6 @@ const StyledCircleContainer = styled.div`
 
 const CircleContainer = () => {
 
-  const [circle, setCircle] = useState();
   const [circlesArray, setCirclesArray] = useState([]);
   const [transferArray, setTransferArray] = useState([]);
 
@@ -25,12 +24,11 @@ const CircleContainer = () => {
       yAxis: e.clientY - 20,
       color: '#636363',
     }
-    setCircle(newCircle);
     setCirclesArray((prevCircles) => [...prevCircles, newCircle]);
   }
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [circlesArray, transferArray,])
+  // }, [circlesArray, transferArray])
 
   return (
     <StyledCircleContainer onClick={handleCreateCircle}>
